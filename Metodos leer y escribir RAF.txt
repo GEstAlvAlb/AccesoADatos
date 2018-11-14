@@ -1,0 +1,22 @@
+Métodos para leer y escribir datos primitivos, enla clase RandomAccessFile
+boolean readBoolean();
+byte readByte();
+int readUnsignedByte();
+short readShort();
+int readUnsignedShort();
+char readChar();
+int readInt();
+String readLine();
+long readLong();
+float readFloat();
+double readDouble();
+void writeBoolean(boolean v);
+void writeByte(int v);
+void writeBytes(String s);
+void writeShort(int v);
+void writeChars(String s);
+void writeChar(int v);
+void writeInt(int v);
+void writeLong(long v);
+void writeFloat(float v);
+void writeDouble(double v);
