@@ -1,0 +1,9 @@
+Juejos
+	objeto
+		Nombre			String
+		Portada			Foto
+		Copias			Int
+		Fecha de salida		Int
+		Precio			Decimal
+		Duracion		Int
+	
