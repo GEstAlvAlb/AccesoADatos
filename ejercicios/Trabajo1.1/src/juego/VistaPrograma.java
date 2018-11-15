@@ -6,20 +6,25 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import base.Juego;
+
 import java.awt.GridLayout;
 import javax.swing.JTextArea;
 import javax.swing.JList;
 import javax.swing.JLabel;
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 
 public class VistaPrograma extends JFrame {
 
 	private JPanel contentPane;
-	public JList list;
+	public JList<Juego> lJuegos;
 	public JLabel lblNewLabel;
 	public JButton btnNuevo;
 	public JButton btnEditar;
 	public JButton btnEliminar;
+	public DefaultListModel<Juego> mJuegos;
 
 	/**
 	 * Launch the application.
@@ -48,9 +53,9 @@ public class VistaPrograma extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		list = new JList();
-		list.setBounds(191, 11, 220, 239);
-		contentPane.add(list);
+		lJuegos = new JList<>();
+		lJuegos.setBounds(191, 11, 220, 239);
+		contentPane.add(lJuegos);
 		
 		lblNewLabel = new JLabel("Juegos");
 		lblNewLabel.setBounds(64, 12, 58, 21);
@@ -67,5 +72,9 @@ public class VistaPrograma extends JFrame {
 		btnEliminar = new JButton("Eliminar");
 		btnEliminar.setBounds(10, 227, 89, 23);
 		contentPane.add(btnEliminar);
+		
+		mJuegos= new DefaultListModel<>();
+		lJuegos.setModel(mJuegos);
+		
 	}
 }
