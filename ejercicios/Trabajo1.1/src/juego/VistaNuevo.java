@@ -12,7 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
-public class Vista extends JFrame {
+public class VistaNuevo extends JFrame {
 
 
 	JFrame ventana;
@@ -31,7 +31,7 @@ public class Vista extends JFrame {
 	public JButton btGuardar;
 	public JButton btCancelar;
 	
-	public Vista() {
+	public VistaNuevo() {
 		SpringLayout springLayout = new SpringLayout();
 		getContentPane().setLayout(springLayout);
 		
