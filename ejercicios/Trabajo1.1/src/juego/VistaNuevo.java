@@ -20,11 +20,11 @@ public class VistaNuevo extends JFrame {
 	public JTextField tfCopias;
 	public JLabel lblNewLabel;
 	public JLabel lblNewLabel_1;
-	public JTextField txFecha;
+	public JTextField tfFecha;
 	public JLabel lblNewLabel_2;
 	public JLabel lblPrecio;
-	public JTextField txPrecio;
-	public JTextField txDuracion;
+	public JTextField tfPrecio;
+	public JTextField tfDuracion;
 	public JLabel lblNewLabel_3;
 	public JLabel lblPortada;
 	public JLabel lblNewLabel_4;
@@ -32,6 +32,9 @@ public class VistaNuevo extends JFrame {
 	public JButton btCancelar;
 	
 	public VistaNuevo() {
+		ventana= new JFrame();
+		ventana.setBounds(100,100,450,300);
+		ventana.getContentPane().setLayout(null);
 		SpringLayout springLayout = new SpringLayout();
 		getContentPane().setLayout(springLayout);
 		
@@ -57,37 +60,37 @@ public class VistaNuevo extends JFrame {
 		springLayout.putConstraint(SpringLayout.EAST, lblNewLabel_1, -23, SpringLayout.WEST, tfCopias);
 		getContentPane().add(lblNewLabel_1);
 		
-		txFecha = new JTextField();
-		springLayout.putConstraint(SpringLayout.NORTH, txFecha, 6, SpringLayout.SOUTH, tfCopias);
-		springLayout.putConstraint(SpringLayout.EAST, txFecha, 0, SpringLayout.EAST, tfNombre);
-		getContentPane().add(txFecha);
-		txFecha.setColumns(10);
+		tfFecha = new JTextField();
+		springLayout.putConstraint(SpringLayout.NORTH, tfFecha, 6, SpringLayout.SOUTH, tfCopias);
+		springLayout.putConstraint(SpringLayout.EAST, tfFecha, 0, SpringLayout.EAST, tfNombre);
+		getContentPane().add(tfFecha);
+		tfFecha.setColumns(10);
 		
 		lblNewLabel_2 = new JLabel("Fecha Lanzamiento");
 		springLayout.putConstraint(SpringLayout.WEST, lblNewLabel_2, 0, SpringLayout.WEST, lblNewLabel);
-		springLayout.putConstraint(SpringLayout.SOUTH, lblNewLabel_2, 0, SpringLayout.SOUTH, txFecha);
+		springLayout.putConstraint(SpringLayout.SOUTH, lblNewLabel_2, 0, SpringLayout.SOUTH, tfFecha);
 		getContentPane().add(lblNewLabel_2);
 		
 		lblPrecio = new JLabel("Precio");
 		springLayout.putConstraint(SpringLayout.WEST, lblPrecio, 0, SpringLayout.WEST, lblNewLabel);
 		getContentPane().add(lblPrecio);
 		
-		txPrecio = new JTextField();
-		springLayout.putConstraint(SpringLayout.SOUTH, lblPrecio, 0, SpringLayout.SOUTH, txPrecio);
-		springLayout.putConstraint(SpringLayout.NORTH, txPrecio, 6, SpringLayout.SOUTH, txFecha);
-		springLayout.putConstraint(SpringLayout.WEST, txPrecio, 0, SpringLayout.WEST, tfNombre);
-		getContentPane().add(txPrecio);
-		txPrecio.setColumns(10);
+		tfPrecio = new JTextField();
+		springLayout.putConstraint(SpringLayout.SOUTH, lblPrecio, 0, SpringLayout.SOUTH, tfPrecio);
+		springLayout.putConstraint(SpringLayout.NORTH, tfPrecio, 6, SpringLayout.SOUTH, tfFecha);
+		springLayout.putConstraint(SpringLayout.WEST, tfPrecio, 0, SpringLayout.WEST, tfNombre);
+		getContentPane().add(tfPrecio);
+		tfPrecio.setColumns(10);
 		
-		txDuracion = new JTextField();
-		springLayout.putConstraint(SpringLayout.NORTH, txDuracion, 6, SpringLayout.SOUTH, txPrecio);
-		springLayout.putConstraint(SpringLayout.WEST, txDuracion, 0, SpringLayout.WEST, tfNombre);
-		getContentPane().add(txDuracion);
-		txDuracion.setColumns(10);
+		tfDuracion = new JTextField();
+		springLayout.putConstraint(SpringLayout.NORTH, tfDuracion, 6, SpringLayout.SOUTH, tfPrecio);
+		springLayout.putConstraint(SpringLayout.WEST, tfDuracion, 0, SpringLayout.WEST, tfNombre);
+		getContentPane().add(tfDuracion);
+		tfDuracion.setColumns(10);
 		
 		lblNewLabel_3 = new JLabel("Duracion");
 		springLayout.putConstraint(SpringLayout.WEST, lblNewLabel_3, 0, SpringLayout.WEST, lblNewLabel);
-		springLayout.putConstraint(SpringLayout.SOUTH, lblNewLabel_3, 0, SpringLayout.SOUTH, txDuracion);
+		springLayout.putConstraint(SpringLayout.SOUTH, lblNewLabel_3, 0, SpringLayout.SOUTH, tfDuracion);
 		getContentPane().add(lblNewLabel_3);
 		
 		lblPortada = new JLabel("Portada");
@@ -112,8 +115,10 @@ public class VistaNuevo extends JFrame {
 		springLayout.putConstraint(SpringLayout.WEST, btCancelar, 0, SpringLayout.WEST, tfNombre);
 		springLayout.putConstraint(SpringLayout.SOUTH, btCancelar, 0, SpringLayout.SOUTH, btGuardar);
 		getContentPane().add(btCancelar);
-		ventana= new JFrame();
-		ventana.setBounds(100,100,450,300);
-		ventana.getContentPane().setLayout(null);
+		
+		ventana.setLocationRelativeTo(null);
+		ventana.repaint();
+		ventana.setVisible(true);
+		
 	}
 }

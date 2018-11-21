@@ -5,17 +5,20 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+import juego.VistaNuevo;
 import juego.VistaPrograma;
 
 public class Controlador implements ActionListener, MouseListener {
 
 	private Modelo modelo;
 	private VistaPrograma vista;
+	private VistaNuevo vistaNuevo;
 	private String nombreImagen;
 
 	public Controlador(VistaPrograma vista, Modelo modelo) {
 		this.vista = vista;
 		this.modelo = modelo;
+		
 
 		addListeners();
 		refrescarLista();
@@ -66,7 +69,11 @@ public class Controlador implements ActionListener, MouseListener {
 		
 		switch (e.getActionCommand()) {
 		case "nuevo":
-			// TODO crear la nueva ventana
+			modoEdicion(true);
+			VistaNuevo vistaNueva= new VistaNuevo();
+			
+			//vista.lJuegos.removeMouseListener(this);
+			
 			break;
 		case "editar":
 			// TODO editar en la otra ventana
