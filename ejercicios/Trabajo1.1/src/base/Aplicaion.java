@@ -12,12 +12,12 @@ public class Aplicaion {
 	public static void main(String[] args){
 
 		VistaPrograma vista = new VistaPrograma();
-		
+		VistaNuevo vistaNuevo=new VistaNuevo();
 
 		
 		try {
 			Modelo modelo = new Modelo();
-			Controlador controlador=new Controlador(vista,modelo);
+			Controlador controlador=new Controlador(vista,modelo,vistaNuevo);
 		} catch (ClassNotFoundException e) {
 			JOptionPane.showMessageDialog(null, "no se puede leer de disco", "eror", JOptionPane.ERROR_MESSAGE);
 		} catch (IOException e) {

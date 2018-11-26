@@ -1,17 +1,32 @@
 package base;
 
-public class Juego {
+import java.io.Serializable;
+public class Juego implements Serializable{
 
 	private String nombre;
 	private String imagen;
 	private int copias;
-	// TODO feha hay que ponerle algo con fechas
+	private int valoracion;
 	private int duracio;
 	private float precio;
-	
-	
 
-	/* (non-Javadoc)
+	/**
+	 * @return the valoracion
+	 */
+	public int getValoracion() {
+		return valoracion;
+	}
+
+	/**
+	 * @param valoracion the valoracion to set
+	 */
+	public void setValoracion(int valoracion) {
+		this.valoracion = valoracion;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override

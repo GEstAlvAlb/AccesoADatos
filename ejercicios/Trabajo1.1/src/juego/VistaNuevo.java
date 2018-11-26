@@ -15,23 +15,25 @@ import javax.swing.JButton;
 public class VistaNuevo extends JFrame {
 
 
-	JFrame ventana;
+	
 	public JTextField tfNombre;
 	public JTextField tfCopias;
 	public JLabel lblNewLabel;
 	public JLabel lblNewLabel_1;
-	public JTextField tfFecha;
+	public JTextField tfValoracion;
 	public JLabel lblNewLabel_2;
 	public JLabel lblPrecio;
 	public JTextField tfPrecio;
 	public JTextField tfDuracion;
 	public JLabel lblNewLabel_3;
 	public JLabel lblPortada;
-	public JLabel lblNewLabel_4;
+	public JLabel lblmagen;
 	public JButton btGuardar;
 	public JButton btCancelar;
+	JFrame ventana;
 	
 	public VistaNuevo() {
+		getContentPane().setEnabled(false);
 		ventana= new JFrame();
 		ventana.setBounds(100,100,450,300);
 		ventana.getContentPane().setLayout(null);
@@ -50,25 +52,24 @@ public class VistaNuevo extends JFrame {
 		tfCopias.setColumns(10);
 		
 		lblNewLabel = new JLabel("Nombre");
-		springLayout.putConstraint(SpringLayout.SOUTH, lblNewLabel, -202, SpringLayout.SOUTH, getContentPane());
-		springLayout.putConstraint(SpringLayout.WEST, tfNombre, 64, SpringLayout.EAST, lblNewLabel);
-		springLayout.putConstraint(SpringLayout.EAST, lblNewLabel, -348, SpringLayout.EAST, getContentPane());
+		springLayout.putConstraint(SpringLayout.NORTH, lblNewLabel, 3, SpringLayout.NORTH, tfNombre);
 		getContentPane().add(lblNewLabel);
 		
 		lblNewLabel_1 = new JLabel("Copias Vendidas");
+		springLayout.putConstraint(SpringLayout.WEST, lblNewLabel, 0, SpringLayout.WEST, lblNewLabel_1);
 		springLayout.putConstraint(SpringLayout.SOUTH, lblNewLabel_1, 0, SpringLayout.SOUTH, tfCopias);
 		springLayout.putConstraint(SpringLayout.EAST, lblNewLabel_1, -23, SpringLayout.WEST, tfCopias);
 		getContentPane().add(lblNewLabel_1);
 		
-		tfFecha = new JTextField();
-		springLayout.putConstraint(SpringLayout.NORTH, tfFecha, 6, SpringLayout.SOUTH, tfCopias);
-		springLayout.putConstraint(SpringLayout.EAST, tfFecha, 0, SpringLayout.EAST, tfNombre);
-		getContentPane().add(tfFecha);
-		tfFecha.setColumns(10);
+		tfValoracion = new JTextField();
+		springLayout.putConstraint(SpringLayout.NORTH, tfValoracion, 6, SpringLayout.SOUTH, tfCopias);
+		springLayout.putConstraint(SpringLayout.EAST, tfValoracion, 0, SpringLayout.EAST, tfNombre);
+		getContentPane().add(tfValoracion);
+		tfValoracion.setColumns(10);
 		
-		lblNewLabel_2 = new JLabel("Fecha Lanzamiento");
+		lblNewLabel_2 = new JLabel("Valoracion");
 		springLayout.putConstraint(SpringLayout.WEST, lblNewLabel_2, 0, SpringLayout.WEST, lblNewLabel);
-		springLayout.putConstraint(SpringLayout.SOUTH, lblNewLabel_2, 0, SpringLayout.SOUTH, tfFecha);
+		springLayout.putConstraint(SpringLayout.SOUTH, lblNewLabel_2, 0, SpringLayout.SOUTH, tfValoracion);
 		getContentPane().add(lblNewLabel_2);
 		
 		lblPrecio = new JLabel("Precio");
@@ -76,8 +77,8 @@ public class VistaNuevo extends JFrame {
 		getContentPane().add(lblPrecio);
 		
 		tfPrecio = new JTextField();
-		springLayout.putConstraint(SpringLayout.SOUTH, lblPrecio, 0, SpringLayout.SOUTH, tfPrecio);
-		springLayout.putConstraint(SpringLayout.NORTH, tfPrecio, 6, SpringLayout.SOUTH, tfFecha);
+		springLayout.putConstraint(SpringLayout.NORTH, lblPrecio, 3, SpringLayout.NORTH, tfPrecio);
+		springLayout.putConstraint(SpringLayout.NORTH, tfPrecio, 6, SpringLayout.SOUTH, tfValoracion);
 		springLayout.putConstraint(SpringLayout.WEST, tfPrecio, 0, SpringLayout.WEST, tfNombre);
 		getContentPane().add(tfPrecio);
 		tfPrecio.setColumns(10);
@@ -89,22 +90,23 @@ public class VistaNuevo extends JFrame {
 		tfDuracion.setColumns(10);
 		
 		lblNewLabel_3 = new JLabel("Duracion");
+		springLayout.putConstraint(SpringLayout.NORTH, lblNewLabel_3, 3, SpringLayout.NORTH, tfDuracion);
 		springLayout.putConstraint(SpringLayout.WEST, lblNewLabel_3, 0, SpringLayout.WEST, lblNewLabel);
-		springLayout.putConstraint(SpringLayout.SOUTH, lblNewLabel_3, 0, SpringLayout.SOUTH, tfDuracion);
 		getContentPane().add(lblNewLabel_3);
 		
 		lblPortada = new JLabel("Portada");
 		springLayout.putConstraint(SpringLayout.EAST, lblPortada, -78, SpringLayout.EAST, getContentPane());
 		getContentPane().add(lblPortada);
 		
-		lblNewLabel_4 = new JLabel("");
-		springLayout.putConstraint(SpringLayout.NORTH, lblNewLabel_4, 57, SpringLayout.NORTH, getContentPane());
-		springLayout.putConstraint(SpringLayout.SOUTH, lblNewLabel_4, -76, SpringLayout.SOUTH, getContentPane());
-		springLayout.putConstraint(SpringLayout.SOUTH, lblPortada, -6, SpringLayout.NORTH, lblNewLabel_4);
-		springLayout.putConstraint(SpringLayout.WEST, lblNewLabel_4, 35, SpringLayout.EAST, tfNombre);
-		springLayout.putConstraint(SpringLayout.EAST, lblNewLabel_4, -35, SpringLayout.EAST, getContentPane());
-		lblNewLabel_4.setIcon(new ImageIcon("C:\\Users\\Alumnot\\Downloads\\fotoRota.jfif"));
-		getContentPane().add(lblNewLabel_4);
+		lblmagen = new JLabel("");
+		springLayout.putConstraint(SpringLayout.WEST, lblmagen, 271, SpringLayout.WEST, getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, tfNombre, -35, SpringLayout.WEST, lblmagen);
+		springLayout.putConstraint(SpringLayout.NORTH, lblmagen, 57, SpringLayout.NORTH, getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, lblmagen, -76, SpringLayout.SOUTH, getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, lblPortada, -6, SpringLayout.NORTH, lblmagen);
+		springLayout.putConstraint(SpringLayout.EAST, lblmagen, -35, SpringLayout.EAST, getContentPane());
+		lblmagen.setIcon(new ImageIcon("C:\\Users\\Alumnot\\Downloads\\fotoRota.jfif"));
+		getContentPane().add(lblmagen);
 		
 		btGuardar = new JButton("Guardar");
 		springLayout.putConstraint(SpringLayout.SOUTH, btGuardar, -28, SpringLayout.SOUTH, getContentPane());
@@ -118,7 +120,7 @@ public class VistaNuevo extends JFrame {
 		
 		ventana.setLocationRelativeTo(null);
 		ventana.repaint();
-		ventana.setVisible(true);
+		ventana.setVisible(false);
 		
 	}
 }

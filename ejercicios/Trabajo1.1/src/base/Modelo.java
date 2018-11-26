@@ -23,7 +23,7 @@ public class Modelo {
 		}
 	}
 
-	private void guardar(Juego juego) throws IOException {
+	public void guardar(Juego juego) throws IOException {
 		juegos.put(juego.getNombre(), juego);
 		guardarADisco();
 	}
@@ -42,9 +42,11 @@ public class Modelo {
 
 	}
 
-	public void eliminar(Juego juego) {
+	public void eliminar(Juego juego) throws IOException {
 		String nombre = juego.getNombre();
 		juegos.remove(nombre);
+		guardarADisco();
+		
 	}
 	
 	public void eliminarTodo() {
