@@ -39,7 +39,7 @@ public class Controlador implements ActionListener, MouseListener {
 			// botones
 			vista.btnEditar.setEnabled(false);
 			vista.btnEliminar.setEnabled(false);
-			vista.btnNuevo.setEnabled(true);
+			vista.btnNuevo.setEnabled(false);
 
 		} else {
 			vista.btnEditar.setEnabled(true);
@@ -79,18 +79,19 @@ public class Controlador implements ActionListener, MouseListener {
 		
 		switch (e.getActionCommand()) {
 		case "Nuevo":
+			limpiar();
 			modoEdicion(true);
 			vistaNuevo.setSize(450,350);
 			vistaNuevo.setVisible(true);
 			
 			
-			//vista.lJuegos.removeMouseListener(this);
+			vista.lJuegos.removeMouseListener(this);
 			
 			break;
 		case "Editar":
 			modoEdicion(true);
 			vistaNuevo.setSize(450,350);
-			// TODO editar en la otra ventana
+			vistaNuevo.setVisible(true);
 			break;
 		case "Eliminar":
 
@@ -105,6 +106,7 @@ public class Controlador implements ActionListener, MouseListener {
 			
 			break;
 		case "Guardar":
+			
 			if(vistaNuevo.tfNombre.getText().equals("")) {
 				JOptionPane.showMessageDialog(null, "El nombre es obligatorio","Error" , JOptionPane.ERROR_MESSAGE);
 				vistaNuevo.tfNombre.selectAll();
@@ -162,6 +164,7 @@ public class Controlador implements ActionListener, MouseListener {
 			limpiar();
 			refrescarLista();
 			vistaNuevo.setVisible(false);
+			modoEdicion(false);
 			break;
 		default:
 			break;
