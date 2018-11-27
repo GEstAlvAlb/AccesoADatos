@@ -26,7 +26,6 @@ public class VistaNuevo extends JFrame {
 	public JTextField tfPrecio;
 	public JTextField tfDuracion;
 	public JLabel lblNewLabel_3;
-	public JLabel lblPortada;
 	public JLabel lblmagen;
 	public JButton btGuardar;
 	public JButton btCancelar;
@@ -94,16 +93,11 @@ public class VistaNuevo extends JFrame {
 		springLayout.putConstraint(SpringLayout.WEST, lblNewLabel_3, 0, SpringLayout.WEST, lblNewLabel);
 		getContentPane().add(lblNewLabel_3);
 		
-		lblPortada = new JLabel("Portada");
-		springLayout.putConstraint(SpringLayout.EAST, lblPortada, -78, SpringLayout.EAST, getContentPane());
-		getContentPane().add(lblPortada);
-		
 		lblmagen = new JLabel("");
 		springLayout.putConstraint(SpringLayout.WEST, lblmagen, 271, SpringLayout.WEST, getContentPane());
 		springLayout.putConstraint(SpringLayout.EAST, tfNombre, -35, SpringLayout.WEST, lblmagen);
 		springLayout.putConstraint(SpringLayout.NORTH, lblmagen, 57, SpringLayout.NORTH, getContentPane());
 		springLayout.putConstraint(SpringLayout.SOUTH, lblmagen, -76, SpringLayout.SOUTH, getContentPane());
-		springLayout.putConstraint(SpringLayout.SOUTH, lblPortada, -6, SpringLayout.NORTH, lblmagen);
 		springLayout.putConstraint(SpringLayout.EAST, lblmagen, -35, SpringLayout.EAST, getContentPane());
 		lblmagen.setIcon(new ImageIcon("C:\\Users\\Alumnot\\Downloads\\fotoRota.jfif"));
 		getContentPane().add(lblmagen);
@@ -121,6 +115,7 @@ public class VistaNuevo extends JFrame {
 		ventana.setLocationRelativeTo(null);
 		ventana.repaint();
 		ventana.setVisible(false);
+		ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 	}
 }

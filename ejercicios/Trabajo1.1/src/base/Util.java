@@ -12,7 +12,6 @@ public class Util {
 	public static void copiarImagen(String rutaOrigen,String nombreDestino) throws IOException{
 		Path origen=FileSystems.getDefault().getPath(rutaOrigen);
 		
-		FileOutputStream destino=new FileOutputStream(new File(System.getProperty("user.dir")+File.separator+"imagenes"+File.separator+nombreDestino));
+		FileOutputStream destino=new FileOutputStream(new File("Imagenes"+File.separator+nombreDestino));
 		Files.copy(origen, destino);
-	}
-}
+	}}

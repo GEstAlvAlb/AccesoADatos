@@ -12,7 +12,7 @@ public class Aplicaion {
 	public static void main(String[] args){
 
 		VistaPrograma vista = new VistaPrograma();
-		VistaNuevo vistaNuevo=new VistaNuevo();
+		VistaNuevo vistaNuevo=new VistaNuevo(); 
 
 		
 		try {

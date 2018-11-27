@@ -9,6 +9,7 @@ public class Juego implements Serializable{
 	private int valoracion;
 	private int duracio;
 	private float precio;
+	
 
 	/**
 	 * @return the valoracion

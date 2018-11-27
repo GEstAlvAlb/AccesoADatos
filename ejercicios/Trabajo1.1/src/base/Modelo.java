@@ -25,6 +25,7 @@ public class Modelo {
 
 	public void guardar(Juego juego) throws IOException {
 		juegos.put(juego.getNombre(), juego);
+		
 		guardarADisco();
 	}
 
@@ -44,28 +45,38 @@ public class Modelo {
 
 	public void eliminar(Juego juego) throws IOException {
 		String nombre = juego.getNombre();
-		juegos.remove(nombre);
+		if (nombre.equals(" ")) {
+			
+		} else {
+			juegos.remove(nombre);
+			guardarADisco();
+		}
+	}
+
+	public void eliminarTodo() throws IOException {
+		juegos.clear();
 		guardarADisco();
-		
 	}
-	
-	public void eliminarTodo() {
-		//TODO falta rellenar
-	}
-	
+
 	public void modificarJuego(String nombre, Juego juego) {
-		
+
 	}
-	
-	public Juego getJuego(String nombre) {
-		return null;
+
+	public ArrayList<Juego> getJuegos(String nombre) {
+
+		ArrayList<Juego> juegosBuscar = new ArrayList<>();
+		for (Juego juego : juegos.values()) {
+			if (juego.getNombre().contains(nombre)) {
+				juegosBuscar.add(juego);
+			}
+		}
+
+		return juegosBuscar;
 	}
-	
-	public ArrayList<Juego> getJuegos(){
+
+	public ArrayList<Juego> getJuegos() {
+
 		return new ArrayList<Juego>(juegos.values());
 	}
-	
-	
-	
 
 }
