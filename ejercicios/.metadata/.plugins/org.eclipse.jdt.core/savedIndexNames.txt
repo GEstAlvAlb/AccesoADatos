@@ -39,6 +39,7 @@ INDEX VERSION 1.131+C:\Users\Alumnot\Desktop\Acceso_a_datos\ejercicios\.metadata
 2773834657.index
 1870878615.index
 1685744695.index
+2524141151.index
 1965245185.index
 2941762184.index
 1854253368.index
