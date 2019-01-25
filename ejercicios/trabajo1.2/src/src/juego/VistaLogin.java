@@ -1,19 +1,4 @@
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.FlowLayout;
-
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JTextField;
-import javax.swing.JLabel;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.security.PrivateKey;
-import java.awt.event.ActionEvent;
+package src.juego;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -33,7 +18,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-public class Login extends JDialog implements ActionListener, KeyListener {
+public class VistaLogin extends JDialog implements ActionListener, KeyListener {
 
 	private final JPanel contentPanel = new JPanel();
 	public JTextField tfUsuario;
@@ -47,7 +32,7 @@ public class Login extends JDialog implements ActionListener, KeyListener {
 	private String usuario;
 	private String contrasena;
 
-	public Login() {
+	public VistaLogin() {
 		setTitle("Login");
 		setBounds(100, 100, 295, 184);
 		getContentPane().setLayout(new BorderLayout());

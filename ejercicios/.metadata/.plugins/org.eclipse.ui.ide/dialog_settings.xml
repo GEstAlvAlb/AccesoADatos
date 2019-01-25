@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+<<<<<<< HEAD
 		<item value="C:\Users\Alumnot\Desktop\Acceso_a_datos\ejercicios\ejemplohibernate"/>
 		<item value="C:\Users\Alumnot\Desktop\Acceso_a_datos\ejercicios\ejemplohibernateP"/>
+=======
+		<item value="C:\Users\Alberto\Desktop\AccesoADatos\ejercicios\Trabajo1.1"/>
+>>>>>>> db7356209d0051b4d918b3338feb3648cdcb38b3
 		<item value="C:\Users\Alumnot\Desktop\Acceso_a_datos\ejercicios\pokeprofe"/>
 		<item value="C:\Users\Alumnot\Desktop\Acceso_a_datos\ejercicios"/>
 		<item value="C:\Users\Alberto\Desktop\AccesoADatos\ejercicios\pokemon"/>

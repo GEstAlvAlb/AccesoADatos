@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
+<<<<<<< HEAD
+=======
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+<fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.io.RandomAccessFile"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+<fullyQualifiedTypeName name="pokemon.iu.Vista"/>
+>>>>>>> db7356209d0051b4d918b3338feb3648cdcb38b3
 <fullyQualifiedTypeName name="javax.swing.JTextField"/>
 <fullyQualifiedTypeName name="pokemon.base.Pokemon"/>
 <fullyQualifiedTypeName name="pokemon.base.Pokemon.Tipo"/>
@@ -8,11 +22,7 @@
 <fullyQualifiedTypeName name="java.nio.file.FileSystem"/>
 <fullyQualifiedTypeName name="alberto.Util.Util"/>
 <fullyQualifiedTypeName name="javax.swing.event.ListSelectionListener"/>
-<fullyQualifiedTypeName name="java.sql.DriverManager"/>
-<fullyQualifiedTypeName name="java.sql.SQLException"/>
-<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
-<fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="javax.swing.JPasswordField"/>
 <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 <fullyQualifiedTypeName name="com.mysql.cj.util.Util"/>
@@ -35,6 +45,7 @@
 <fullyQualifiedTypeName name="java.awt.event.WindowListener"/>
 <fullyQualifiedTypeName name="javax.swing.WindowConstants"/>
 <fullyQualifiedTypeName name="java.io.File"/>
+<<<<<<< HEAD
 <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
 <fullyQualifiedTypeName name="java.lang.VirtualMachineError"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
@@ -60,4 +71,13 @@
 <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
 <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
 <fullyQualifiedTypeName name="com.sfaci.ejemplohibernate.base.Arma"/>
+=======
+<fullyQualifiedTypeName name="src.juego.VistaLogin"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+>>>>>>> db7356209d0051b4d918b3338feb3648cdcb38b3
 </qualifiedTypeNameHistroy>
